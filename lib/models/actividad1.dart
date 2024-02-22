@@ -3,11 +3,11 @@ class Paciente {
   int estadoCivil = 0;
   int edad = 0;
 
-  Paciente({required this.sexo, required this.estadoCivil, required this.edad});
+  Paciente();
 
-  Paciente.fromJson(Map<String, dynamic> json) {
-    sexo = json['sexo'];
-    estadoCivil = json['estadoCivil'];
-    edad = json['edad'];
+  Paciente.fromJson({required Map<String, dynamic> json}) {
+    sexo = json["sexo"];
+    estadoCivil = json["estadoCivil"];
+    edad = json["edad"];
   }
 }

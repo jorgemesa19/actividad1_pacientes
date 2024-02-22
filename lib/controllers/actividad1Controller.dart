@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'dart:convert';
 import 'package:actividadad1_pacientes/models/actividad1.dart';
 
@@ -25,10 +27,10 @@ void main() {
   ''';
 
   // Convertir cadena JSON en una lista de mapas
-  List<Map<String, dynamic>> pacientesList = jsonDecode(pacientesJson);
+  List<dynamic> pacientesList = jsonDecode(pacientesJson);
 
   // Crear lista de pacientes utilizando el constructor nombrado
-  List<Paciente> pacientes = pacientesList.map((json) => Paciente.fromJson(json)).toList();
+  List<Paciente> pacientes = pacientesList.map((json) => Paciente.fromJson(json: json)).toList();
 
   // Contabilizar la cantidad de hombres solteros, suma de edades de hombres casados y cantidad de mujeres solteras
   int hombresSolteros = 0;
