@@ -32,14 +32,12 @@ void main() {
   // Crear lista de pacientes utilizando el constructor nombrado
   List<Paciente> pacientes = pacientesList.map((json) => Paciente.fromJson(json: json)).toList();
 
-  // Contabilizar la cantidad de hombres solteros, suma de edades de hombres casados y cantidad de mujeres solteras
   int hombresSolteros = 0;
   int sumaEdadesHombresCasados = 0;
   int mujeresSolteras = 0;
   int totalHombres = 0;
   int totalSolteros = 0;
 
-  // Iterar sobre la lista de pacientes
   // Sexo (1. Hombre, 2. Mujer)
   // Estado civil (1. Soltero, 2. Casado, 3. Viudo)
   for (var paciente in pacientes) {
